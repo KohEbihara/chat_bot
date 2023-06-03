@@ -1,0 +1,49 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block extra_style %}
+<link rel="stylesheet" href="{% static './main/css/index.css' %}">
+<!-- <script type="text/javascript" src="{% static './main/js/script.js' %}"></script> -->
+{% endblock %}
+{% block content %}
+<main class="main">
+    <div class="talk-room" id="scroll">
+        {# 過去のチャットの表示部分 #}
+        <ul class="chatboard">
+            {# チャットを古い順に for 文で表示します #}
+            {% for talk in talks %}
+            {% if talk.send_bot %}
+            <li class="chatbot__item">
+                    <p class="chatbot__message">{{ talk.message }}</p>
+                    <p class="chatbot__time">
+                        {{ talk.time|date:"Y年Md日" }}
+                        {{ talk.time|date:"H:i" }}
+                    </p>
+            </li>
+                {% else %}
+            <li class="chatboard__item">
+                    <p class="chatboard__message">{{ talk.message }}</p>
+                    <p class="chatboard__time">
+                        {{ talk.time|date:"Y年Md日" }}
+                        {{ talk.time|date:"H:i" }}
+                    </p>
+                {% endif %}
+            </li>
+                <!-- {% for answer_text in answer_texts %}
+                <li class="chatbot__item">
+                    <p class="chatbot__message">{{ answer_text }}</p>
+                </li>
+                {% endfor %} -->
+            {% endfor %}
+        </ul>
+        {# チャットの送信フォーム #}
+    </div>
+    <form action="" method="POST" class="message-form">
+        {% csrf_token %}
+        {{ form.message }}
+        <button type="submit" class="message-form__submit">送信</button>
+    </form>
+    {% endblock %}
+</main>
+<!-- <script type="text/javascript" src="{% static './main/js/script.js' %}"></script> -->
+

@@ -1,0 +1,148 @@
+ .main {
+    width: 50%;
+    margin: auto;
+}
+
+.talk-room {
+    margin: 0;
+    padding: 0;
+    background: #eee;
+    overflow-y: scroll;
+    height: 60vh;
+} 
+
+/* トークの表示部分 */
+/* .chatboard {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chatboard__item {
+    padding: 8px;
+    width: 100%; */
+    /* margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; */
+    
+/* } */
+/* .chatbot__item { */
+    /* padding: 8px; */
+    /* display: flex;
+    justify-content: flex-start; */
+    /* padding: 8px;
+    width: 60%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chatboard__item:first-child {
+    border-top: 2px solid #eee;
+}
+
+.chatboard__item:last-child {
+    border-bottom: 2px solid #eee;
+} */
+
+
+/* .chatboard__message {
+    padding: 16px 20px 16px;
+    margin-left: auto;
+    border-radius: 8px;
+    display: inline-block; */
+    /* max-width: 100%;
+    min-width: 5px; */
+    /* background: #4cc764;
+    word-break: break-all; */
+    /* position: relative;
+    min-width: 70px;
+}
+
+.chatboard__message::before {
+    border-left: 30px solid #4cc764;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    content: "";
+    position: absolute;
+    transform: translate(75%, -50%);
+    top: 50%;
+    right: 0;
+}
+
+.chatboard__time {
+    /* position: absolute; */
+    /* padding: 20px;
+    right: 16px;
+    font-size: 0.6rem;
+    margin: 0;
+} */
+/* 
+.chatbot__message {
+    padding: 16px 20px 16px;
+    margin-right: auto;
+    margin: 0 0 0 20px;
+    border-radius: 8px;
+    display: inline-block;
+    background: #ccc;
+    word-break: break-all;
+} */ 
+
+/* トーク送信部分 */
+ .message-form {
+    padding: 16px;
+    height: 48px; 
+    background-color: lightgray;
+    border-radius: 0 0 16px 16px; 
+    text-align: center; 
+    border-top: solid 5px #eee;
+} 
+
+ .message-form input {
+
+    background-color: white;
+    border: solid 1px silver;
+    box-sizing: border-box;
+    height: 38px;
+    line-height: 1.4;
+    padding: 4px 0;
+    resize: none;
+    width: 80%;
+
+} 
+
+ .message-form * {
+    box-sizing: border-box;
+} 
+
+.message-form input {
+    width: calc(100% - 5em);
+    margin: 10px 0;
+    padding: 0 12px;
+    border: 2px solid #131313;
+    border-radius: 14px;
+    font-size: 1rem;
+    line-height: 24px;
+} 
+
+
+.message-form__submit {
+    background-color: rgba(59,191,218);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+} 
+
+/* talk_room 固有の header の要素 */
+.back-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    height: 2rem;
+    margin: auto;
+    font-size: 2rem;
+    color: #888;
+}
